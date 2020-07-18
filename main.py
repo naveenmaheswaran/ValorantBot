@@ -47,6 +47,7 @@ class MyClient(discord.Client):
             self.yeslist=[[],[],[],[],[]]
             self.count=[0,0,0,0,0]
             self.pollmaster = ["","","","",""]
+            self.top=0
            
 
         if (message.content == play):
