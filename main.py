@@ -234,7 +234,7 @@ class MyClient(discord.Client):
             for sublist in self.yeslist:
                 await message.channel.send("***** Displaying yes list "+str(listnumber+1)+"*****")
                 if self.count[listnumber]==0:
-                    await message.channel.send("***** No one willing to play now in room+"str(listnumber+1)"+ *****")
+                    await message.channel.send("***** No one willing to play now in room "+str(listnumber+1)+" *****")
                     listnumber+=1
                     continue
 
