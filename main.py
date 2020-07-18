@@ -50,6 +50,7 @@ class MyClient(discord.Client):
             author="{0.author}".format(message)
             if author not in self.pollmaster:
                 await message.channel.send("No poll to stop")
+                return
 
             c=0
             for i in self.pollmaster:
