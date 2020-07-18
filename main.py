@@ -31,7 +31,7 @@ class MyClient(discord.Client):
         if(message.content[0]!=commandPrefix):
             return
         if(message.content=="/master"):
-            for i in self.master:
+            for i in self.pollmaster:
                 await message.channel("Masters")
                 await message.channel.send(i)
                 
