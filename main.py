@@ -32,7 +32,7 @@ class MyClient(discord.Client):
             return
         if(message.content=="/master"):
             for i in self.pollmaster:
-                await message.channel("Masters")
+                await message.channel.send("Poll Masters")
                 await message.channel.send(i)
                 
         if(message.content=="/call"):
