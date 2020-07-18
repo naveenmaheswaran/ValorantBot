@@ -234,7 +234,7 @@ class MyClient(discord.Client):
             for sublist in self.yeslist:
                 await message.channel.send("***** Displaying yes list "+str(listnumber+1)+"*****")
                 if self.count[listnumber]==0:
-                    await message.channel.send("***** No one willing to play now *****")
+                    await message.channel.send("***** No one willing to play now in room+"str(listnumber+1)"+ *****")
                     listnumber+=1
                     continue
 
@@ -255,6 +255,7 @@ class MyClient(discord.Client):
             await message.channel.send("/nn - to decline the RSVP")
             await message.channel.send("/stop - stop the poll only my its maker")
             await message.channel.send("/yeslist - to see all the members able to play")
+            await message.channel.send("/master - to see all the poll master")
 
         
             
