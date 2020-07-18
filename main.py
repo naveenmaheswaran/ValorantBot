@@ -31,10 +31,15 @@ class MyClient(discord.Client):
         if(message.content[0]!=commandPrefix):
             return
         if(message.content=="/master"):
+            if(self.top==0):
+                await message.channel.send("No poll masters")
+                return
             await message.channel.send("Poll Masters")
             for i in self.pollmaster:
+                if(i==""):
+                    continue
                 await message.channel.send(i)
-            await message.channel.send("Done")
+            await message.channel.send("___________________")
               
                 
         if(message.content=="/call"):
