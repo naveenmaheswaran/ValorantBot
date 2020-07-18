@@ -40,6 +40,8 @@ class MyClient(discord.Client):
             self.pollmaster[self.top] = author
             self.top+=1
             ## chaech duplicate pa
+            await message.channel.send("----------------------------------")
+
             await message.channel.send(self.pollmaster[self.top-1]+ " wants to play Valorant now! who wanna join?")
 
         if (message.content == "/stop"):
